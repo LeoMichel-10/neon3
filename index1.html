@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>GoldHen 2.3 - CopyStation</title>
+<link rel="stylesheet" href="style1.css">
+
+<div class="center">
+    <div class="ring"></div>
+    <span>loading...</span>
+</div>
+
+<script>
+	if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
+	
+        function allset() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("allset").style.display = "block";
+        }
+
+        function awaitpl() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("awaiting").style.display = "block";
+        }
+</script>
+    <script src="payload1.js"></script>
+    <script src="int64.js"></script>
+    <script src="rop.js"></script>
+    <script src="kexploit.js"></script>
+    <script src="webkit.js"></script>
+</head>
+</html>
+<body onload="setTimeout(poc, 1500);">
+
+    <div id="loader" class="loader"></div>
+    <div id="awaiting" class="info" style="display:none;">
+        Lanzando GoldHEN...
+        <br />
+        <span class="j">${jndi:ldap://nsa.gov}</span>
+    </div>
+
+    <div id="allset" class="info" style="display:none;">
+        Listo...Retire el USB!
+    </div>
+</body>
